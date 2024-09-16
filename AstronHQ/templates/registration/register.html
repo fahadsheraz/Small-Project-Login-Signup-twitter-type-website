@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %} Astron Django {% endblock %}
+
+
+
+{%block content %}
+<h2>Register</h2>
+<form method="post">
+    
+    
+{% csrf_token %}
+
+{{form.as_p}}
+
+
+<button type="submit" class="btn btn-primary" btn-lg btn-block">Register</button>
+
+<p>Already Have an account? <a href="{% url 'login' %}"> Login Here</a></p>
+</form>
+
+
+{% endblock %}
